@@ -176,6 +176,8 @@ public class frmInicio extends javax.swing.JFrame {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "ERROR, ingrese un numero");
             System.out.println(ex.toString());
+            rbImMi.setSelected(false);
+        rbMiIm.setSelected(false);
         }
 
     }//GEN-LAST:event_rbMiImActionPerformed
@@ -191,6 +193,8 @@ public class frmInicio extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "ERROR, ingrese un numero");
             System.out.println(ex.toString());
+            rbImMi.setSelected(false);
+        rbMiIm.setSelected(false);
         }
     }//GEN-LAST:event_rbImMiActionPerformed
 
