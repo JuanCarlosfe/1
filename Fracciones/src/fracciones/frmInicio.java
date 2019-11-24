@@ -82,6 +82,7 @@ public class frmInicio extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("Conversion");
 
+        btnLimpiar.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +157,7 @@ public class frmInicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(btnLimpiar)
                 .addGap(21, 21, 21))
         );
@@ -172,12 +173,16 @@ public class frmInicio extends javax.swing.JFrame {
             txtDenominador2.setText(String.valueOf(denominador1));
             txtEntero.setText(String.valueOf(numerador1 / denominador1));
             rbImMi.setEnabled(false);
+            
+            txtNumerador2.setEnabled(false);
+            txtDenominador2.setEnabled(false);
+            txtEntero.setEnabled(false);
 
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "ERROR, ingrese un numero");
             System.out.println(ex.toString());
             rbImMi.setSelected(false);
-        rbMiIm.setSelected(false);
+            rbMiIm.setSelected(false);
         }
 
     }//GEN-LAST:event_rbMiImActionPerformed
@@ -190,11 +195,14 @@ public class frmInicio extends javax.swing.JFrame {
             txtNumerador.setText(String.valueOf((e * dm2) + nm2));
             txtDenominador.setText(String.valueOf(dm2));
             rbMiIm.setEnabled(false);
+            txtNumerador.setEnabled(false);
+            txtDenominador.setEnabled(false);
+            
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "ERROR, ingrese un numero");
             System.out.println(ex.toString());
             rbImMi.setSelected(false);
-        rbMiIm.setSelected(false);
+            rbMiIm.setSelected(false);
         }
     }//GEN-LAST:event_rbImMiActionPerformed
 
@@ -218,6 +226,11 @@ public class frmInicio extends javax.swing.JFrame {
         rbMiIm.setEnabled(true);
         rbImMi.setSelected(false);
         rbMiIm.setSelected(false);
+        txtNumerador.setEnabled(true);
+        txtDenominador.setEnabled(true);
+        txtNumerador2.setEnabled(true);
+        txtDenominador2.setEnabled(true);
+        txtEntero.setEnabled(true);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
